@@ -238,23 +238,34 @@ section {
 }
 
 .projects-grid {
-  display: flex;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-items: center; /* ⬅️ Ini bikin isinya rata tengah */
   gap: 2rem;
+  padding: 2rem;
 }
 
 .projects-card {
-  padding: 3rem 2rem;
+  width: 300px;
+  background: #fff;
+  border: 2px solid #0002;
+  border-radius: 20px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-self: center;
-  text-align: center;
-  gap: 1.5rem;
-  border: 2px solid black;
-  border-radius: 3rem;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
+}
+
+/* Untuk gambar dalam card */
+.projects-card img {
+  max-width: 100%; /* Supaya tidak melebihi card */
+  height: auto; /* Menjaga rasio gambar */
+  border-radius: 10px; /* Opsional: buat lebih halus */
+  margin-bottom: 1rem;
+  object-fit: contain;
 }
 
 .projects-card:hover {
@@ -263,10 +274,6 @@ section {
   transform: translateY(-10px) scale(1.02);
 }
 
-.projects-card img {
-  width: 20vw;
-  border-radius: 1rem;
-}
 .projects-card:hover .btn {
   border: 2px solid white;
   color: white;
