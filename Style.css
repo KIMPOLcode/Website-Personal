@@ -11,6 +11,7 @@
 
 h2 {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 h3 {
@@ -19,6 +20,7 @@ h3 {
 
 p {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 section {
@@ -118,6 +120,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 4rem;
 }
 
 .about .about-container {
@@ -216,22 +219,60 @@ section {
   border-radius: 3rem;
 }
 
-/* Grid Cards */
+/* Experience Cards */
+.experience-info {
+  margin-top: 5rem;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+  justify-items: center;
 }
 
 .grid-card {
-  border: 2px solid black;
-  border-radius: 3rem;
+  background-color: #fff;
+  border: 2px solid #0002;
+  border-radius: 20px;
   padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  transition: 0.2s ease-in-out;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.grid-card i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: linear-gradient(to right, blue, red);
+}
+
+.grid-card span {
+  font-size: 1.25rem;
+  font-weight: 600;
+  background: linear-gradient(to right, blue, red);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.grid-card h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.grid-card p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  text-align: center;
 }
 
 .grid-card:hover {
@@ -239,20 +280,6 @@ section {
   background-color: black;
   color: white;
 }
-
-.grid-card i {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.grid-card span {
-  font-size: 1.5rem;
-  font-weight: 500;
-  background: linear-gradient(to right, blue, red);
-  background-clip: text;
-  color: transparent;
-}
-
 /* Projects Grid */
 .projects-grid {
   display: grid;
@@ -306,31 +333,78 @@ section {
   font-weight: 500;
 }
 
-/* Input Section */
+/* Contact Section */
+.contact {
+  background: linear-gradient(to right, #f0f2f5, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
 .input-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  margin-top: 10rem;
-  text-align: center;
+  gap: 1.5rem;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.input-box h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.input-box p {
+  font-size: 1rem;
+  opacity: 0.7;
+  margin-bottom: 1rem;
 }
 
 .input-box input {
-  border-radius: 3rem;
-  border: 2px solid black;
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
   width: 100%;
-  max-width: 400px;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  border: 2px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+.input-box form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
-.input i {
-  position: absolute;
-  font-size: 2rem;
-  top: 50%;
-  left: 10px;
-  transform: translate(0, -50%);
+.input-box input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+.input-box .btn {
+  background: linear-gradient(to right, blue, red);
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.input-box .btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
@@ -363,6 +437,39 @@ footer ul li a {
 }
 
 /* Skills */
+.skills-container,
+.tools-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.skill,
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.skill-image,
+.tool-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.skill-name,
+.tool-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Additional Skill Text Layout */
 .row-skill {
   padding-top: 3rem;
   display: flex;
@@ -410,6 +517,116 @@ footer ul li a {
   animation: blink 0.7s infinite;
   color: black;
   font-weight: bold;
+}
+
+/* About Section */
+.about-info {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.about-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Skills & Tools */
+.skills-container,
+.tools-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.skill,
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.skill:hover,
+.tool:hover {
+  transform: scale(1.05);
+}
+
+.skill-image,
+.tool-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.skill-name,
+.tool-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Contact Section */
+.contact {
+  background: linear-gradient(to right, #f0f2f5, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  border: 2px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.input-box input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.input-box .btn {
+  background: linear-gradient(to right, blue, red);
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.input-box .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes blink {
@@ -482,5 +699,9 @@ footer ul li a {
 
   .socials i {
     font-size: 2rem;
+  }
+
+  .input-box {
+    padding: 0 1rem;
   }
 }
