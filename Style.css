@@ -17,6 +17,10 @@ h3 {
   text-align: center;
 }
 
+p {
+  text-align: center;
+}
+
 section {
   min-height: 100vh;
   padding: 8rem 5%;
