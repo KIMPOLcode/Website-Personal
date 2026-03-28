@@ -230,79 +230,68 @@ section {
 }
 
 /* Experience */
-.experience-info {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 5rem;
-  text-align: center;
+.experience {
+  padding: 80px 10%;
+  margin-bottom: 100px;
 }
 
-.experience img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 3rem;
-}
-
-/* Experience Cards */
+/* HAPUS flex di sini ❗ */
 .experience-info {
   margin-top: 5rem;
+  width: 100%;
 }
 
+/* Grid layout utama */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  justify-items: center;
 }
 
+/* Card */
 .grid-card {
   background-color: #fff;
   border: 2px solid #0002;
   border-radius: 20px;
   padding: 2rem;
-  text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: 0.3s ease;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+
+  min-height: 220px; /* biar rata & ga kepotong */
 }
 
+/* ICON FIX (gradient ga bisa langsung di color ❗) */
 .grid-card i {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: linear-gradient(to right, blue, red);
+  background: linear-gradient(to right, blue, red);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
+/* Title */
 .grid-card span {
   font-size: 1.25rem;
   font-weight: 600;
   background: linear-gradient(to right, blue, red);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   margin-bottom: 0.5rem;
 }
 
-.grid-card h3 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-
+/* Text */
 .grid-card p {
   font-size: 0.95rem;
   opacity: 0.8;
-  text-align: center;
 }
 
+/* Hover effect lebih smooth */
 .grid-card:hover {
-  transform: scale(1.02);
+  transform: translateY(-5px);
   background-color: black;
   color: white;
 }
