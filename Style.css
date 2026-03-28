@@ -244,8 +244,9 @@ section {
 /* Grid layout utama */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 250px);
   gap: 2rem;
+  justify-content: center; /* ini bikin center */
 }
 
 /* Card */
