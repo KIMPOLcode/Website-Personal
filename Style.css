@@ -271,11 +271,10 @@ section {
 
 /* Icon gradient fix */
 .grid-card i {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  background: linear-gradient(to right, blue, red);
-  -webkit-background-clip: text;
-  color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 /* Title */
