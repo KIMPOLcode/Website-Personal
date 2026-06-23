@@ -282,7 +282,11 @@ section {
   font-size: 1.25rem;
   font-weight: 600;
   background: linear-gradient(to right, blue, red);
+
+  background-clip: text;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
   color: transparent;
   margin-bottom: 0.5rem;
 }

@@ -1,4 +1,4 @@
-const roles = ["Junior Frontend Developer", "UI/UX Designer", "Data Analyst", "Konsultan IT", "KPI Analyst", "Content Creator"];
+const roles = ["Frontend Developer", "UI/UX Designer", "Data Analyst", "Konsultan IT", "KPI Analyst", "Content Creator"];
 
 const textEl = document.getElementById("typingText");
 let roleIndex = 0;
