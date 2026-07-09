@@ -569,7 +569,56 @@ section {
   transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+/* New Work Experience Section Styles */
+        .work-experience {
+            padding: 4rem 2rem;
+            max-width: 1000px; /* slightly narrower for the timeline look */
+            margin: 0 auto;
+        }
 
+        .work-header {
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        /* The small blue dot and line */
+        .work-header::before {
+            content: '';
+            position: absolute;
+            left: -40px; /* Adjust based on padding */
+            top: 12px;
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-blue);
+            border-radius: 50%;
+        }
+
+        .section-subtitle {
+            text-transform: uppercase;
+            color: var(--accent-blue);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--accent-blue);
+            margin-right: 15px;
+        }
+
+        .work-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin: 0;
+            letter-spacing: -1px;
+        }
 @keyframes blink {
   0%,
   100% {
